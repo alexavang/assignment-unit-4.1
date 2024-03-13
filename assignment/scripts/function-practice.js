@@ -94,17 +94,30 @@ console.log(isFirstLetter('t', myString));
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
-  // TODO: return the sum
+for(s of array){
+   sum += s;
 }
+  // TODO: return the sum
+  return sum;
+}
+console.log(sumAll([1, 2, 10, 8, 4]));
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-function allPositive() {
-
+function allPositive(array) {
+let positive = [];
+for(p of array){
+  if(p > 0) {
+    positive.push(p);
+  }
 }
-
+return positive
+}
+let array = [-4, -3, 0, 1, 2];
+let positiveArray = allPositive(array);
+console.log(positiveArray);
+console.log(array);
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
