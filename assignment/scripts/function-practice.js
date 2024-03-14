@@ -123,6 +123,51 @@ console.log(array);
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
+// Create a function that returns the number of true values 
+// there are in an array.
+
+// Examples: 
+// countTrue([true, false, false, true, false]) -> 2
+// countTrue([false, false, false, false]) -> 0
+// countTrue([]) -> 0
+
+// Notes:
+// Return 0 if given an empty array.
+// All array items are of the type bool (true or false)
+
+// We want to determine the number of true values in the array.
+// We start by creating and giving a variable num the value of 0.
+// Then for every value in the array if it's true (exact match only),
+// we increment the num variable by 1.
+// We return the value of num which represents the amount of true 
+// in the array.
+
+function countTrue(array){
+  let num = 0;
+  for(i=0; i<array.length; i++){
+    if (array[i] === true){
+      num++;
+    }
+  }
+  return num;
+}
+
+console.log(countTrue([true, false, false, true, false]));
+console.log(countTrue([false, false, false, false]));
+console.log(countTrue([]));
+
+// Another alternative way of doing this problem.
+
+function countTrue(array){
+  let num = 0;
+  for(let n of array){
+    num += n;
+  }
+  return num;
+}
+console.log(countTrue([true, false, false, true, false]));
+console.log(countTrue([false, false, false, false]));
+console.log(countTrue([]));
 
 // DO NOT MODIFY
 // Used for automated testing
